@@ -1,0 +1,25 @@
+# @author Rastko Gajanin 11930500
+# @brief Makefile for the third assignment B server
+# @date 17.12.2020
+
+CC = gcc
+DEFS = -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_SVID_SOURCE -D_POSIX_C_SOURCE=200809L
+CFLAGS = -Wall -g -std=c99 -pedantic -lm $(DEFS)
+
+
+.PHONY: all clean
+
+all:  server
+
+
+server: server.o 
+	$(CC) $(CFLAGS) -o server server.o 
+
+
+server.o: server.c 
+	$(CC) $(CFLAGS) -c -o server.o server.c
+
+
+clean:
+	rm -rf *.o 
+	rm server

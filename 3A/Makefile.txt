@@ -1,0 +1,25 @@
+# @author Rastko Gajanin 11930500
+# @brief Makefile for the third assignment A client
+# @date 17.12.2020
+
+CC = gcc
+DEFS = -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_SVID_SOURCE -D_POSIX_C_SOURCE=200809L
+CFLAGS = -Wall -g -std=c99 -pedantic -lm $(DEFS)
+
+
+.PHONY: all clean
+
+all:  client
+
+
+client: client.o 
+	$(CC) $(CFLAGS) -o client client.o 
+
+
+client.o: client.c 
+	$(CC) $(CFLAGS) -c -o client.o client.c
+
+
+clean:
+	rm -rf *.o 
+	rm client
