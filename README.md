@@ -5,9 +5,8 @@
   - Plaintext
   - Binary
 - Compression of the transferred content possible
-- Tools used:
-  - TCP/IP
-  - UDP
+- Tool used:
+  - TCP/IP Sockets
   
 ## Client
 
