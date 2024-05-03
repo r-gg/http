@@ -6,7 +6,8 @@
   - Binary
 - Compression of the transferred content possible
 - Tools used:
-  - TCP/IP Sockets
+  - TCP/IP
+  - UDP
   
 ## Client
 
